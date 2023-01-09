@@ -30,11 +30,12 @@ document.getElementById("textNote").addEventListener("keyup", function (event) {
 });
 
 function addLi() {
-  let ul = document.getElementById("ulList");
-  let li = document.createElement("li");
   let text = document.getElementById("textNote").value;
-  li.append(text);
-  ul.append(li);
-
-  textNote.value = "";
+  if(text != ""){
+    let ul = document.getElementById("ulList");
+    let li = document.createElement("li");
+    li.append(text);
+    ul.append(li);
+    textNote.value = "";
+  }
 }
