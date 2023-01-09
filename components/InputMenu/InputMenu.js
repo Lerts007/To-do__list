@@ -2,7 +2,6 @@ const ROOT_INPUTMENU = document.getElementById("inputMenu");
 class InputMenu {
   render() {
     const html = `
-        <div class = "inputMenu-container">
             <div class = "logotip">
                 <h2>Заметки</h2>
             </div>
@@ -10,7 +9,6 @@ class InputMenu {
                 <input type = "text" placeholder = "Купить мороженое..." id="textNote"/> 
                 <button class = "inputMenu-btn" onclick="addLi()">Добавить</button>
             </div>
-        </div>
         `;
 
     ROOT_INPUTMENU.innerHTML = html;

@@ -2,8 +2,11 @@ const ROOT_LIST = document.getElementById("list");
 class List {
   createUl() {
     const html = `
+      <div class = "List-container">
         <ul id = "ulList">
-        </ul>`;
+        </ul>
+      </div>
+      `;
     ROOT_LIST.innerHTML = html;
   }
 
@@ -32,4 +35,6 @@ function addLi() {
   let text = document.getElementById("textNote").value;
   li.append(text);
   ul.append(li);
+
+  textNote.value = "";
 }

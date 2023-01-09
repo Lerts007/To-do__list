@@ -1,24 +1,27 @@
-.inputMenu-container {
+#inputMenu {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: center;
+  flex-direction: column;
+}
+
+.logotip, .addMenu{
+  width: 800px;
+  display: flex;
+  justify-content: center;
 }
 
 .addMenu {
-  width: 100%;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 h2 {
   margin: 0;
   font-size: 64px;
 }
 input {
-  width: 740px;
+  width: 100%;
   height: 50px;
   padding: 5px;
   border: 0;
@@ -39,11 +42,15 @@ button {
   font-size: 30px;
 }
 
-@media only screen and (max-width : 450px){
+@media only screen and (max-width : 800px){
+  .logotip, .addMenu{
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   input, button{
     height: 40px;
     font-size: 25px;
   }
-
-
 }

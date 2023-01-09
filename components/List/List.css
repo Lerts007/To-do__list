@@ -1,0 +1,10 @@
+#list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+.List-container{
+    display: flex;
+    justify-content: flex-start;
+}
