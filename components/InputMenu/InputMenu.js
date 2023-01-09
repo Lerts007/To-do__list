@@ -10,7 +10,6 @@ class InputMenu {
                 <input type = "text" placeholder = "Купить мороженое..."/> 
                 <button class = "inputMenu-btn">Добавить</button>
             </div>
-            <div class = "login"></div>
         </div>
         `;
 
