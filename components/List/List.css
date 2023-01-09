@@ -5,6 +5,9 @@
 }   
 
 .List-container{
-    display: flex;
-    justify-content: flex-start;
+    width: 800px;
+    height: 250px;
+    padding-left: 35px;
+    font-size: 30px;
+    border: 1px solid black;
 }

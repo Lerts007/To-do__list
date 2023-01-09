@@ -34,8 +34,8 @@ function addLi() {
   if(text != ""){
     let ul = document.getElementById("ulList");
     let li = document.createElement("li");
-    li.append(text);
-    ul.append(li);
+    li.prepend(text);
+    ul.prepend(li);
     textNote.value = "";
   }
 }
