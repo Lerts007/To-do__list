@@ -1,0 +1,35 @@
+.inputMenu-container {
+  width: 100%;
+  height: 50px;
+  display: grid;
+  grid-template-areas: "a1 a2 a3";
+  grid-template-columns: 1fr 800px 1fr;
+  grid-template-rows: 50px;
+}
+.logotip {
+  grid-area: a1;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+h2 {
+  margin: 0;
+}
+
+.addMenu {
+  width: 100%;
+  grid-area: a2;
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  height: 50px;
+  grid-area: a3;
+}
+
+input {
+  margin-right: 10px;
+  width: 740px;
+  border: 0;
+}
