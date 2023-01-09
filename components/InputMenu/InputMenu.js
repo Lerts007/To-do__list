@@ -7,8 +7,8 @@ class InputMenu {
                 <h2>Заметки</h2>
             </div>
             <div class = "addMenu">
-                <input type = "text" placeholder = "Купить мороженое..."/> 
-                <button class = "inputMenu-btn">Добавить</button>
+                <input type = "text" placeholder = "Купить мороженое..." id="textNote"/> 
+                <button class = "inputMenu-btn" onclick="addLi()">Добавить</button>
             </div>
         </div>
         `;
