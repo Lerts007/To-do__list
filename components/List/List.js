@@ -3,9 +3,9 @@ class List {
   createEL(text) {
     const html = `
       <div class = "List-container">
-        <input type="checkbox"/>
-        <p class="text" onClick="delete_row(this)">${text}</p>
-        <img src="../../img/trash.png"/>
+        <input type = "checkbox" class = "checkbox__input" id = "checkbox__id"/>
+        <label class = "text" for = "checkbox__id">${text}</label>
+        <img src="../../img/trash.png" onClick="delete_row(this)"/>
       </div>
       `;
     textNote.value = "";

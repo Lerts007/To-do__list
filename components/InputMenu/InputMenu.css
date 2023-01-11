@@ -41,6 +41,7 @@ button {
   border-bottom-right-radius: 5px;
   font-family: "Caveat", cursive;
   font-size: 30px;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {

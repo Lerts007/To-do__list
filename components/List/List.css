@@ -7,7 +7,61 @@
 .List-container {
   width: 800px;
   height: 50px;
-  padding-left: 10px;
+  position: relative;
   display: flex;
   font-size: 30px;
+  border-bottom: 1px solid black;
+}
+.text {
+  width: 100%;
+  margin-left: 10px;
+  padding-left: 25px;
+}
+
+
+img{
+  width: 25px;
+  height: 25px;
+  margin-top: 12.5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.checkbox__input{
+  appearance: none;
+  position: absolute;
+}
+
+.text::before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background: url(../../img/checkOff.png) no-repeat;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  z-index: 1;
+}
+
+.text::after{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  background: url(../../img/checkOn.png) no-repeat;
+  background-size: 20px 20px;
+  opacity: 0;
+
+  position: absolute;
+  top: 15px;
+  left: 0;
+  z-index: 2;
+}
+
+.checkbox__input:checked + .text::after{
+  opacity: 1;
 }
