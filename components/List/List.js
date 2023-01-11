@@ -5,6 +5,7 @@ class List {
       <div class = "List-container">
         <input type="checkbox"/>
         <p class="text" onClick="delete_row(this)">${text}</p>
+        <img src="../../img/trash.png"/>
       </div>
       `;
     textNote.value = "";
