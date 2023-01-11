@@ -1,38 +1,21 @@
 const ROOT_LIST = document.getElementById("list");
 class List {
-  createUl() {
+  createEL(text) {
     const html = `
       <div class = "List-container">
-        <ul id = "ulList">
-        </ul>
+        <input type="checkbox"/>
+        <p class="text" onClick="delete_row(this)">${text}</p>
       </div>
       `;
-    ROOT_LIST.innerHTML = html;
-  }
+    textNote.value = "";
 
-  // метод удаления элемента списка
-  removeLi() {
-    let myblock = document.querySelectorAll("li");
-
-    myblock.forEach((block) => block.addEventListener("click", removeBlock));
-
-    function removeBlock() {
-      let block = this;
-      block.style.opacity = 1;
-      let blockId = setInterval(function () {
-        if (block.style.opacity > 0) block.style.opacity -= 0.1;
-        else {
-          clearInterval(blockId);
-          block.remove();
-        }
-      }, 60);
-    }
+    ROOT_LIST.innerHTML += html;
   }
 }
 
 const ListPage = new List();
-ListPage.createUl();
 
+//Функция добавления через кнопку 'Enter'
 document.getElementById("textNote").addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
@@ -40,14 +23,22 @@ document.getElementById("textNote").addEventListener("keyup", function (event) {
   }
 });
 
+//Функция добавления через кнопку
 function addLi() {
   let text = document.getElementById("textNote").value;
-  if (text != "") {
-    let ul = document.getElementById("ulList");
-    let li = document.createElement("li");
-    li.prepend(text);
-    ul.prepend(li);
-    textNote.value = "";
-    ListPage.removeLi();
-  }
+  if (text !== "") ListPage.createEL(text);
+}
+
+//Функция удаления элемента списка
+function delete_row(el) {
+  let el1 = el.parentNode;
+  el1.style.opacity = 1;
+  let intervalId = setInterval(() => {
+    if (el1.style.opacity > 0) {
+      el1.style.opacity -= 0.1;
+    } else {
+      clearInterval(intervalId);
+      el.parentNode.parentNode.removeChild(el.parentNode);
+    }
+  }, 20);
 }

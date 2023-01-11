@@ -1,13 +1,13 @@
-#list{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}   
+#list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-.List-container{
-    width: 800px;
-    height: 250px;
-    padding-left: 35px;
-    font-size: 30px;
-    border: 1px solid black;
+.List-container {
+  width: 800px;
+  height: 50px;
+  padding-left: 10px;
+  display: flex;
+  font-size: 30px;
 }
