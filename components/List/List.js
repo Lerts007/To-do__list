@@ -9,6 +9,8 @@ class List {
       `;
     ROOT_LIST.innerHTML = html;
   }
+
+  // метод удаления элемента списка
   removeLi() {
     let myblock = document.querySelectorAll("li");
 
