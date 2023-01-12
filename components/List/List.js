@@ -4,7 +4,7 @@ class List {
     const html = `
       <div class = "List-container">
         <input type = "checkbox" class = "checkbox__input" id = "checkbox__id"/>
-        <label class = "text" for = "checkbox__id">${text}</label>
+        <label class = "text" for = "checkbox__id" onClick="checkIc()">${text}</label>
         <img src="../../img/trash.png" onClick="delete_row(this)"/>
       </div>
       `;
@@ -42,4 +42,9 @@ function delete_row(el) {
       el.parentNode.parentNode.removeChild(el.parentNode);
     }
   }, 20);
+}
+
+function checkIc() {
+  console.log(document.getElementById(".checkbox__id"));
+  //el.style.background = "url(../../img/checkOn.png) no-repeat";
 }
