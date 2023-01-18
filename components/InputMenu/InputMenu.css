@@ -21,7 +21,7 @@ h2 {
   margin: 0;
   font-size: 64px;
 }
-.addMenu > input {
+#textNote {
   width: 100%;
   height: 50px;
   padding: 5px;
@@ -52,8 +52,8 @@ button {
     padding-right: 10px;
   }
 
-  input,
-  button {
+  #textNote,
+  .inputMenu-btn {
     height: 40px;
     font-size: 25px;
   }
